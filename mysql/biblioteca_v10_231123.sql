@@ -29,7 +29,7 @@ CREATE TABLE `autori` (
   `data_nascita` date DEFAULT NULL,
   `data_morte` date DEFAULT NULL,
   PRIMARY KEY (`id_autore`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -38,7 +38,7 @@ CREATE TABLE `autori` (
 
 LOCK TABLES `autori` WRITE;
 /*!40000 ALTER TABLE `autori` DISABLE KEYS */;
-INSERT INTO `autori` VALUES (1,'Jane Austen','Inglese','1775-12-16','1817-07-18'),(2,'George Orwell','Inglese','1903-06-25','1950-01-21'),(3,'Harper Lee','Americana','1926-04-28','2016-02-19');
+INSERT INTO `autori` VALUES (1,'Jane Austen','Inglese','1775-12-16','1817-07-18'),(2,'George Orwell','Inglese','1903-06-25','1950-01-21'),(3,'Harper Lee','Americana','1926-04-28','2016-02-19'),(4,'Jane Austen','Inglese','1775-12-16','1817-07-18'),(5,'George Orwell','Inglese','1903-06-25','1950-01-21'),(6,'Harper Lee','Americana','1926-04-28','2016-02-19');
 /*!40000 ALTER TABLE `autori` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -53,7 +53,7 @@ CREATE TABLE `categorie` (
   `id_categoria` int NOT NULL AUTO_INCREMENT,
   `nome_categoria` varchar(50) NOT NULL,
   PRIMARY KEY (`id_categoria`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -62,7 +62,7 @@ CREATE TABLE `categorie` (
 
 LOCK TABLES `categorie` WRITE;
 /*!40000 ALTER TABLE `categorie` DISABLE KEYS */;
-INSERT INTO `categorie` VALUES (1,'Romanzo'),(2,'Saggio'),(3,'Fantascienza'),(4,'Mistero');
+INSERT INTO `categorie` VALUES (1,'Romanzo'),(2,'Saggio'),(3,'Fantascienza'),(4,'Mistero'),(5,'Romanzo'),(6,'Saggio'),(7,'Fantascienza'),(8,'Mistero'),(9,'Romanzo'),(10,'Saggio'),(11,'Fantascienza'),(12,'Mistero'),(13,'Romanzo'),(14,'Saggio'),(15,'Fantascienza'),(16,'Mistero');
 /*!40000 ALTER TABLE `categorie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -106,4 +106,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-11-25 13:28:15
+-- Dump completed on 2023-11-30 10:58:56
