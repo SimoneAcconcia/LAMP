@@ -21,4 +21,4 @@ CREATE TABLE IF NOT EXISTS film (
     FOREIGN KEY(id_attori) REFERENCES attori (id_attori)
 );
 
-INSERT INTO (atorre1,attore2,attore3) VALEUS(‘Johnny Depp,’’,Jennifer Lawrence’,’Chris Hemsworth’)
+INSERT INTO film (id_attori, nome, nascita) VALUES (1,'Johnny Depp','1963-06-09');
