@@ -1,0 +1,63 @@
+<html>
+<head>   
+    <title> ITCS ERASMO DA ROTTERDAM</title>
+</head>
+<body>
+<h1> INSERISCI I  TUOI DATI DATI ANAGRAFICI </h1>
+    <form method = "POST" action = 'login.php'>		<!-- tramite metodo POST si accede alla pagina riservata login.php con il form-->
+	<label>  inserisci nome : </label>			<!-- etichette o suggerimenti nei campi username e password -->
+	</br>
+	<input name = "nome" id ="nome" type = "nome" placeholder = "nome" required pattern="[A-Za-z\s]+">
+	</br>
+	<label> inserisci cognome: </label>
+	</br>
+	<input name="cognome" id = "cognome" type = "cognome" placeholder = "cognome"  required pattern="[A-Za-z\s']+">
+	</br>
+	<label> inserisci dato di nascita:</label>
+	</br>
+	<input name="nascita" id="nascita" type="nascita" placeholder="nascita" required>
+	</br>
+	<label> inserisci codice fiscale:</label>
+	</br>
+	<input name="codice_fiscale" id="codice_fiscale" type="codice_fiscale" placeholder="codice fiscale"   pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$">
+	</br>
+	<label> inserisci una email:</label>
+	</br>
+	<input name="email" id="email" type="email" placeholder="email" required>
+	</br>
+	<label> inserisci il numero di telefono(prefisso,numero)</label>
+	</br>
+	<input name="prefisso" id="prefisso" type="text" placeholder="prefisso" pattern="\+[0-9]{1,4}">
+	<input name="numero" id="numero" type="numero" placeholder="numero" pattern="[0-9]{10}"> 
+	</br>
+	<label> inserisci indirizzo(via,cap,comune,provincia):</label>
+	</br>
+	<input name="via" id="via" type="via" placeholder="via" required>
+	<input name="cap" id="cap" type="cap" placeholder="cap" required>
+	<input name="comune" id="comune" type="comune" placeholder="comune" required>
+	<input name="provincia" id="provincia" type="provincia" placeholder="provincia" required>
+	</br>
+	<label> inserisci il nickname:</label>
+	</br>
+	<input name="nickname" id="nickname" type="nickname" placeholder="nickname">
+	</br>
+	<label> inserisci la password:</label>
+	</br>
+	<input name="password" id="password" type="password" placeholder="password">
+	</br>
+	<input type = "submit" value = "invio">		<!-- pulsante di invio -->
+	</form>
+</body>
+</html>
+
+
+<!--- nome (obbligatorio, solo caratteri alfabetici e spazio)
+cognome (obbligatorio, solo caratteri alfabetici + spazio e apostrofo)
+data di nascita (obbligatorio)
+codice fiscale (opzionale)
+email (obbligatoria)
+cellulare (opzionale, numerico con 10)
+indirizzo: via/piazza, cap, comune, provincia (obbligatori)
+nickname (deve essere diverso da nome e cognome)
+password (maiuscola, numero, minimo 8 caratteri, carattere speciale)
+-->
