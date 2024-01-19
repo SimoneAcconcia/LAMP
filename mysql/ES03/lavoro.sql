@@ -97,8 +97,3 @@ FROM   impiegati
 RIGHT JOIN dipartimenti
 ON impiegati.id_dipartimento = dipartimenti.id_dipartimento
 WHERE  impiegati.id_dipartimento IS NULL;
-
-SELECT *  
-FROM   impiegati 
-FULL OUTER JOIN dipartimenti 
-ON impiegati.id_dipartimento = dipartimenti.id_dipartimento;
