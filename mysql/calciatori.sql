@@ -43,8 +43,26 @@ VALUES (NULL,'Rossi', 'attaccante', 1000, '2005-05-19', 5,NULL);
 UPDATE  calciatori SET cognome='bianchi' where cognome='rossi';
 
 -- cancellare nella tabella sqadre  l'istanza con nome squadra = a verdi
-drop table sqadre where nome_squadra='Verdi';
+DELETE from squadra where nome_squadra = 'Verdi';
 
+-- Inserire 5 istanze nella tabella calciatori
+INSERT INTO calciatori(id_calciatore, cognome, ruolo, stipendio, nascita, capitano_squadra, id_squadra) 
+VALUES (NULL,'Rossi', 'attaccante', 10000, '2005-05-19', 5,NULL);
+
+INSERT INTO calciatori(id_calciatore, cognome, ruolo, stipendio, nascita, capitano_squadra, id_squadra) 
+VALUES (NULL,'verdi', 'attaccante', 3000, '2005-05-19', 5,NULL);
+
+INSERT INTO calciatori(id_calciatore, cognome, ruolo, stipendio, nascita, capitano_squadra, id_squadra) 
+VALUES (NULL,'gialli', 'attaccante', 299, '2005-05-19', 5,NULL);
+
+INSERT INTO calciatori(id_calciatore, cognome, ruolo, stipendio, nascita, capitano_squadra, id_squadra) 
+VALUES (NULL,'neri', 'attaccante', 2345534, '2005-05-19', 5,NULL);
+
+-- produrre un elenco con i cognomi  di tutti i calciatori  aventi stipendio  maggiore di 1000 ordinato sul cognome
+select cognome 
+from calciatori 
+where stipendio>1000;
+order by cognome;
 
 
 
