@@ -1,38 +1,59 @@
 <?php
+// Definizione delle costanti per la connessione al database
+define('DB_SERVER', 'localhost');
+define('DB_NAME', 'ES05');
+define('DB_USERNAME', 'ES05_user'); 
+define('DB_PASSWORD', 'mia_password');
+
 session_start();
 
-//Recupero i dati dal form
-$usr = $_POST['username'] ?? '';
-$pwd = $_POST['password'] ?? '';
+// Recupera le credenziali dalla richiesta POST
+$username = $_POST['username'] ?? "";
+$password = $_POST['password'] ?? "";
 
-//Mi connetto al DB
+// Connessione al database
+$conn = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+// Verifica della connessione
+if (!$conn) {die("Connessione fallita: " . mysqli_connect_error());}
 
-//Interrogo il DB e vedi se esuste l'utente
+echo "Connessione al database riuscita<br>";
 
+// Esegui la query per verificare le credenziali dell'utente
+$query = "SELECT * FROM utente WHERE Username = '$username' AND Password = '$password';";
+$result = mysqli_query($conn, $query);
+echo $query."<br>";
 
+// Verifica se la query ha restituito risultati
+if (mysqli_num_rows($result) > 0) {
+    echo "Login riuscito. Benvenuto!"; // L'utente è autenticato con successo
+} else {
+    echo "Credenziali non valide. Riprova."; // L'utente non è autenticato
+}
 
-
-
-
+// Chiudi la connessione al database
+mysqli_close($conn);
 ?>
-
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>ITCS ERASMO DA ROTTERDAM</title>
+    <title>Login</title>
 </head>
 <body>
-    <h1>INSERISCI LE TUE CREDENZIALI</h1>
+    <h3>Pagina di login</h3>
+    <?=$errmsg?>
+    <h4>Credenziali:</h4>
+    <h4>username: admin</h4>
+    <h4>password: admin</h4>
 
-    <?=$output?>
+    <form method="POST" action="">
+        <label for="username">Nome utente:</label>
+        <input type="text" name="username" required><br><br>
 
-    <form method="POST" action="riservata.php">
-        <label>inserisci username:</label><br>
-        <input name="username" id="username" type="text" placeholder="username"><br>
-        <label>inserisci password:</label><br>
-        <input name="password" id="password" type="password" placeholder="password"><br>
-        <input type="submit" name="submit">
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br><br>
+
+        <input type="submit" value="Accedi">
     </form>
 </body>
 </html>
