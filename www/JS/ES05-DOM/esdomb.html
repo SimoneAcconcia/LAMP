@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>proprietà principali dell'oggetto navigator </title>
+</head>
+
+<body>
+    <h1>Proprietà dell'oggetto navigator</h1>
+    <script>
+        console.log("Proprietà principali dell'oggetto navigator:");
+
+        console.log("User Agent:", navigator.userAgent);
+        console.log("Piattaforma:", navigator.platform);
+        console.log("Lingua preferita:", navigator.language);
+        console.log("Cookie abilitati:", navigator.cookieEnabled);
+        console.log("Browser online:", navigator.onLine);
+
+        if (navigator.geolocation) {
+            console.log("Accesso alla geolocalizzazzione consentito.");
+        } else {
+            console.log("Accesso alla  geolocalizzazzione  non consentito.");
+        }
+
+        if ('geolocation' in navigator) {
+            navigator.geolocation.getCurrentPosition((position) => {
+                console.log("Latitude:", position.coords.latitude);
+                console.log("Longitude:", position.coords.longitude);
+            }, (error) => {
+                console.error("Geolocation error:", error.message);
+            });
+        } else {
+            console.log("Geolocation not supported");
+        }
+
+
+        console.log("Informazioni dettagliate sull'User Agent:", navigator.userAgentData);
+        console.log("Fornitore del browser:", navigator.vendor);
+        console.log("Plugin installati:", navigator.plugins);
+
+        if (navigator.javaEnabled()) {
+            console.log("Java è abilitato nel browser.");
+        } else {
+            console.log("Java non è abilitato nel browser.");
+        }
+    </script>
+</body>
+
+</html>

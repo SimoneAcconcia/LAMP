@@ -8,23 +8,30 @@
         console.log("Proprietà principali dell'oggetto window:");
 
         //Proprietà document
-        console.log("window.document:", window.document);
         console.log("Descrizione: Rappresenta il documento caricato nella finestra e fornisce metodi per manipolarlo.");
+        console.log("window.document.title:", window.document.title);
+        console.log("---------------------------------------------------------");
 
-       //Proprietà location
-        console.log("window.location:", window.location);
+        //Proprietà location
         console.log("Descrizione: Fornisce informazioni sull'URL del documento corrente e permette la navigazione verso nuovi URL.");
+        console.log("window.location.host:", window.location.host);
+        console.log("window.location.hostname:", window.location.hostname);
+        console.log("window.location.href:", window.location.href);
+        console.log("---------------------------------------------------------");
 
         //Proprietà navigator
-        console.log("window.navigator:", window.navigator);
         console.log("Descrizione: Contiene informazioni sul browser e l'ambiente in cui il codice viene eseguito.");
+        console.log("window.navigator.userAgent:", window.navigator.userAgent);
+        console.log("window.navigator.appVersion:", window.navigator.appVersion);
+        console.log("---------------------------------------------------------");
 
         //Proprietà innerWidth e innerHeight
+        console.log("Descrizione: Restituiscono le dimensioni interne della finestra del browser.");
         console.log("window.innerWidth:", window.innerWidth);
         console.log("window.innerHeight:", window.innerHeight);
-        console.log("Descrizione: Restituiscono le dimensioni interne della finestra del browser.");
+        console.log("---------------------------------------------------------");
 
-       //Proprietà localStorage e sessionStorage
+        //Proprietà localStorage e sessionStorage
         console.log("window.localStorage:", window.localStorage);
         console.log("window.sessionStorage:", window.sessionStorage);
         console.log("Descrizione: Forniscono la possibilità di memorizzare dati localmente nel browser.");
