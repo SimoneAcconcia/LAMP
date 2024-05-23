@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Converti il testo da minuscolo in maiuscolo</title>
+</head>
+<body>
+    <h1>Inserisci il codice fiscale</h1>
+    <input type="text" id="codice_fiscale" placeholder="Inserisci  il codice fiscale">
+
+    <script>
+        const codiceFiscaleInput = document.getElementById('codice_fiscale');
+        codiceFiscaleInput.addEventListener('input', function() {
+            this.value = this.value.toUpperCase();
+        });
+    </script>
+</body>
+</html>
