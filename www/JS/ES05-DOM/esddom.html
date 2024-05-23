@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Convertitore testo in maiuscolo</title>
+</head>
+<body>
+    <input type="text" id="idCasellaTesto" placeholder="Scrivi qui">
+    
+    <script>
+        //seleziona la casella di testo
+        var inputBox = document.getElementById("idCasellaTesto");
+
+        //aggiungi un gestore per l'evento input
+        inputBox.addEventListener("input", function() 
+        {
+            var testoInserito = inputBox.value;
+            inputBox.value = testoInserito.toUpperCase();
+       });
+    </script>
+</body>
+</html>
