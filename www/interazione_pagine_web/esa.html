@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Modifica Colore Pulsante</title>
+</head>
+<body>
+    <h1>Modifica Colore e Sfondo del Pulsante</h1>
+<button id="myButton">appoggia il mouse</button>
+    
+    <script>
+        const myButton = document.getElementById('myButton');
+        myButton.addEventListener('mouseover', function() 
+        {
+            // Cambia il colore del testo al passaggio del mouse
+            this.style.color = 'white';
+            // Cambia lo sfondo al passaggio del mouse
+            this.style.backgroundColor = 'blue';
+        });
+
+        myButton.addEventListener('mouseout', function() 
+        {
+            // Ripristina il colore del testo quando il mouse esce dal pulsante
+            this.style.color = '';
+            // Ripristina lo sfondo quando il mouse esce dal pulsante
+            this.style.backgroundColor = '';
+        });
+    </script>
+</body>
+</html>
