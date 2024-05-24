@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambiare sfondo casella e nascondere testo</title>
+</head>
+<body>
+    <h1>Interazioni con la casella di testo e il paragrafo</h1>
+    
+    <input type="text" id="myInput" placeholder="Digita qui">
+
+    <p id="testoDaNascondere">Testo da nascondere. Clicca per nascondere.</p>
+
+    <script>
+        // Cambiare sfondo casella di testo quando prende e perde il focus
+        const myInput = document.getElementById('myInput');
+
+        myInput.addEventListener('focus', function() {
+            this.style.backgroundColor = '#00ff00'; // Verde
+        });
+
+        myInput.addEventListener('blur', function() {
+            this.style.backgroundColor = '#ffffff'; // Bianco
+        });
+
+        // Nascondere il testo dopo il click
+        const testoDaNascondere = document.getElementById('testoDaNascondere');
+        testoDaNascondere.addEventListener('click', function() {
+            this.hidden = true;
+        });
+    </script>
+</body>
+</html>
