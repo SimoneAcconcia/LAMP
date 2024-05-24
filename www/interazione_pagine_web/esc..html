@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cambiare sfondo casella</title>
+</head>
+<body>
+    <input type="text" id="myInput" placeholder="inserisci il testo qui">
+
+    <script>
+        const myInput = document.getElementById('myInput');
+
+        myInput.addEventListener('focus', function() {
+            this.style.backgroundColor = '#00ff00'; // Verde
+        });
+
+        myInput.addEventListener('blur', function() {
+            this.style.backgroundColor = '#ffffff'; // Bianco
+        });
+    </script>
+</body>
+</html>
